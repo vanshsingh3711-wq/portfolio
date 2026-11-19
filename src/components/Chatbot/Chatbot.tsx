@@ -297,11 +297,11 @@ export const Chatbot: React.FC<ChatbotProps> = ({ botName = 'Assistant', welcome
               }}
               data-magnetic
               className="group flex items-center gap-3 border border-line bg-ink/90 p-2 sm:pr-4 backdrop-blur-md transition-colors hover:border-paper focus:outline-none focus-visible:ring-1 focus-visible:ring-paper"
-              /* Le nom accessible reprend le texte visible « CD Assistant » (WCAG 2.5.3) */
-              aria-label={`CD ${botName} — ${t('chatbot.open', { defaultValue: 'Ouvrir le chat' })}`}
+              /* Le nom accessible reprend le texte visible « VS Assistant » (WCAG 2.5.3) */
+              aria-label={`VS ${botName} — ${t('chatbot.open', { defaultValue: 'Ouvrir le chat' })}`}
             >
               <span className="relative border border-paper/70 px-1 pt-0.5 font-display text-[15px] font-semibold leading-tight">
-                CD
+                VS
                 <span className="absolute -right-1 -top-1 flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-paper opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-paper" />
@@ -333,7 +333,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ botName = 'Assistant', welcome
             {/* En-tête */}
             <header className="flex shrink-0 items-center justify-between gap-3 border-b border-line px-4 py-3">
               <div className="flex min-w-0 items-center gap-3">
-                <span className="border border-paper/70 px-1 pt-0.5 font-display text-[15px] font-semibold leading-tight">CD</span>
+                <span className="border border-paper/70 px-1 pt-0.5 font-display text-[15px] font-semibold leading-tight">VS</span>
                 <div className="min-w-0">
                   <p className="truncate font-mono text-[12px] uppercase tracking-[0.1em]">{botName}</p>
                   <p className="label flex items-center gap-1.5 text-[10px]">
@@ -378,7 +378,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ botName = 'Assistant', welcome
                   {messages.map((m) =>
                     m.isBot ? (
                       <div key={m.id} className="max-w-[92%]">
-                        <p className="label mb-1.5 text-[10px]">CD·BOT — {m.time}</p>
+                        <p className="label mb-1.5 text-[10px]">VS·BOT — {m.time}</p>
                         <div className="border-l border-paper/40 pl-3">
                           <p className={`whitespace-pre-line text-[14px] leading-relaxed text-paper/90 ${m === lastBot ? 'chat-reveal' : ''}`}>{m.text}</p>
                           {m.actions && m.actions.length > 0 && (

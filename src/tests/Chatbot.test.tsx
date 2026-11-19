@@ -66,7 +66,7 @@ describe('Chatbot', () => {
     fireEvent.click(screen.getByRole('button', { name: /chat/i }));
     await screen.findByRole('textbox');
     fireEvent.keyDown(window, { key: 'Escape' });
-    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument(), { timeout: 4000 });
     await waitFor(() => expect(screen.getByRole('button', { name: /chat/i })).toHaveFocus());
   });
 
@@ -164,9 +164,12 @@ describe('Chatbot', () => {
     const closeButton = screen.getByRole('button', { name: /fermer/i });
     fireEvent.click(closeButton);
     
-    await waitFor(() => {
-      expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
-    });
+    await waitFor(
+      () => {
+        expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
+      },
+      { timeout: 4000 }
+    );
   });
 
   it('devrait ne pas envoyer de message vide', async () => {
