@@ -1,0 +1,428 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cv": "Resume",
+    "lab": "Lab",
+    "navigation": "Navigation"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "projects": "Projects",
+    "project": "Project"
+  },
+  "hero": {
+    "location": "Nagpur, India",
+    "region": "Maharashtra, India",
+    "role": "AI Engineer & Backend Developer",
+    "roleDetail": "FastAPI · Python · Next.js · TypeScript · AWS",
+    "tagline": "AI Engineer & Open-Source Contributor"
+  },
+  "about": {
+    "title": "About",
+    "intro": "Self-taught AI Engineer and Backend Developer with hands-on experience building production-grade AI-powered applications. Designed and shipped multi-tenant SaaS platforms, real-time voice AI systems, and deterministic video generation pipelines using Python, TypeScript, FastAPI, Next.js, and cloud infrastructure (AWS ECS/Fargate, SQS).",
+    "expertise": "My expertise covers real-time streaming voice pipelines (Twilio WebSockets, Deepgram STT/TTS, OpenAI GPT-4o), deterministic video rendering architectures with Remotion, cloud-scale asynchronous processing on AWS ECS/Fargate, and structured agent tool-use via Model Context Protocol (MCP).",
+    "passion": "Deeply passionate about developer tooling, AI agents, and open-source infrastructure. I contribute to and study high-throughput systems like LiteLLM and local neural audio synthesis tools like VoiceStudio.",
+    "viewCV": "View Resume",
+    "downloadCV": "Download Resume",
+    "education": "Education",
+    "skills": "Skills",
+    "interests": "Areas of Expertise",
+    "interestsList": [
+      "AI Agents & Multi-Actor Orchestration",
+      "Real-Time Streaming Voice AI",
+      "Deterministic Video Rendering Architectures",
+      "Developer Tooling & Codebase Intelligence",
+      "Model Context Protocol (MCP) & Agent Tooling",
+      "Distributed Systems & Cloud Infrastructure (AWS)",
+      "High-Throughput AI Gateways"
+    ],
+    "experience": "Professional Experience",
+    "experienceList": [
+      {
+        "title": "AI Voice Platform Architect",
+        "company": "Lead Catcher",
+        "period": "2026",
+        "description": "Built a scalable, multi-tenant voice AI platform that qualifies real estate leads 24/7 with strict company isolation, sub-second latency Twilio WebSocket streaming, and PostgreSQL SELECT FOR UPDATE SKIP LOCKED workers.",
+        "highlights": [
+          "Real-time streaming pipeline (Twilio → Deepgram → GPT-4o → Deepgram)",
+          "Sub-second latency with Base64 μ-law 8kHz audio",
+          "PostgreSQL SELECT FOR UPDATE SKIP LOCKED CRM workers",
+          "Argon2id password hashing & JWT authentication audit"
+        ]
+      },
+      {
+        "title": "Distributed Rendering Engineer",
+        "company": "AI Director",
+        "period": "2026",
+        "description": "Designed a novel AI → structured scene definition → deterministic rendering architecture that generates animations, motion graphics, and captions without arbitrary code execution.",
+        "highlights": [
+          "Deterministic scene specification with Remotion",
+          "Asynchronous AWS ECS/Fargate & SQS cloud rendering",
+          "FFmpeg multi-track compositing and audio encoding"
+        ]
+      },
+      {
+        "title": "Autonomous Outbound Systems Engineer",
+        "company": "Outreach",
+        "period": "2026",
+        "description": "Architected an autonomous B2B outbound prospecting platform discovering high-intent accounts, identifying verified decision-makers, and generating hyper-personalized pitches via DeepSeek AI.",
+        "highlights": [
+          "Autonomous B2B account discovery & intent scoring",
+          "DeepSeek AI contextual pitch generation",
+          "FastAPI, Celery & Redis distributed task queues",
+          "Multi-inbox deliverability & automated email warmup"
+        ]
+      },
+      {
+        "title": "Autonomous Agent Engineer",
+        "company": "Lucy (AI Shopping Agent)",
+        "period": "2026",
+        "description": "Developed an AI personal stylist agent that discovers suitable products via Shopify API and structured MCP (Model Context Protocol) tool orchestration.",
+        "highlights": [
+          "Model Context Protocol (MCP) tool-use integration",
+          "Shopify GraphQL catalog filtering & inventory checks",
+          "Conversational styling and constraint solving"
+        ]
+      }
+    ],
+    "impact": "Impact & Results",
+    "impactList": [
+      "Engineered real-time streaming voice pipeline with sub-second latency (Twilio → Deepgram → GPT-4o → Deepgram)",
+      "Architected asynchronous video rendering pipeline scaling on AWS ECS/Fargate and SQS queues",
+      "Implemented PostgreSQL SELECT FOR UPDATE SKIP LOCKED queues for robust HubSpot CRM job processing",
+      "Designed deterministic scene definition engine for pixel-perfect Remotion video generation",
+      "Contributed to high-impact open-source projects including LiteLLM (20k+ stars) and VoiceStudio"
+    ]
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "allProjects": "All Projects",
+    "viewAll": "View All Projects",
+    "demo": "View Site",
+    "viewSiteProduction": "View Site",
+    "viewSiteDemo": "View Demo",
+    "code": "View Code",
+    "technologies": "Technologies",
+    "repositories": "Repositories",
+    "backHome": "Back to Home",
+    "viewDetails": "View Details",
+    "personalProject": "Personal Project",
+    "professionalProject": "Professional work",
+    "clientProject": "Client work",
+    "githubProject": "GitHub",
+    "description": "Index of projects by Vansh Singh: production AI platforms, real-time voice agents, cloud video pipelines, and developer tooling.",
+    "openSource": "Open source",
+    "openSourceTitle": "Contributions",
+    "openSourceIntro": "Pull requests to other teams' projects: {{count}} merged so far.",
+    "prsMerged_one": "{{count}} PR merged",
+    "prsMerged_other": "{{count}} PRs merged",
+    "prsOpen_one": "{{count}} PR open",
+    "prsOpen_other": "{{count}} PRs open"
+  },
+  "projectDetail": {
+    "back": "Back",
+    "notFound": "Project not found",
+    "backToProjects": "Back to projects",
+    "personalProject": "Personal Project",
+    "professionalProject": "Professional work",
+    "clientProject": "Client work",
+    "viewSite": "View Site",
+    "viewDemo": "View Demo",
+    "sourceCode": "Source Code",
+    "about": "About the project",
+    "features": "Main Features",
+    "challenges": "Technical Challenges",
+    "languages": "Languages",
+    "technologies": "Technologies",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Tools",
+    "tags": "Tags",
+    "relatedProjects": "Related Projects",
+    "allProjects": "View all projects",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "archived": "Archived"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's Stay in Touch",
+    "description": "I am always open to new opportunities and collaborations. Feel free to contact me!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Your message...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Error sending message."
+  },
+  "chatbot": {
+    "welcome": "👋 Hello! How can I help you today?",
+    "typing": "Typing...",
+    "placeholder": "Type your message...",
+    "assistant": "Assistant",
+    "teaser": "A question about my work? Ask my assistant.",
+    "dismiss": "Hide invitation",
+    "open": "Open chat",
+    "status": "Online · local answers",
+    "reset": "New conversation",
+    "expand": "Expand",
+    "minimize": "Minimize",
+    "close": "Close",
+    "send": "Send"
+  },
+  "game": {
+    "title": "Star game",
+    "headline": "Signal hunt",
+    "unlocked": "3 / 3 stars found — game unlocked",
+    "best": "Your best",
+    "rule1": "20 seconds to catch as many stars as you can. They vanish faster and faster.",
+    "rule2": "Inverted stars (white square) are worth 3 points.",
+    "rule3": "Chain quick clicks: the multiplier climbs up to ×4.",
+    "start": "Start game",
+    "later": "Maybe later",
+    "score": "Score",
+    "close": "Close game",
+    "star": "Star",
+    "goldenStar": "Bonus star",
+    "over": "Game over",
+    "newRecord": "New personal best!",
+    "enterNickname": "Your initials (3 letters)",
+    "submit": "Save",
+    "rank": "Ranked #{{rank}}",
+    "submitError": "Your score could not be saved.",
+    "restart": "Play again",
+    "backToSite": "Back to site",
+    "leaderboard": "Leaderboard",
+    "offline": "Online leaderboard unavailable — your best is kept on this device.",
+    "found": "Star found",
+    "hintHero": "Hint: at the very top of the home page.",
+    "hintContact": "Hint: near the contact form.",
+    "hintFooter": "Hint: at the very bottom of the page.",
+    "unlockedToast": "All stars found — a game is unlocking…",
+    "starFound": "Star found",
+    "hiddenStar": "Hidden star",
+    "play": "Play the star game",
+    "huntHint": "Stars are hidden across the site…",
+    "starsFound": "stars found"
+  },
+  "footer": {
+    "description": "Building production-grade AI applications, real-time voice streaming systems, deterministic video rendering engines, and developer tooling.",
+    "location": "Location",
+    "backToTop": "Back to top",
+    "allRightsReserved": "All rights reserved",
+    "manageCookies": "Manage cookies"
+  },
+  "cookieConsent": {
+    "acceptShort": "Accept",
+    "declineShort": "Decline",
+    "title": "🍪 Cookies & Privacy",
+    "description": "This site uses cookies to improve your experience (Google Analytics, preferences) and track technical errors (Sentry). Your data is protected in accordance with GDPR.",
+    "privacyLink": "privacy policy",
+    "accept": "Accept all cookies",
+    "decline": "Decline non-essential cookies",
+    "details": "Essential cookies: language, consent. Analytics cookies: Google Analytics (anonymized)."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleLanguage": "Change language",
+    "currentLanguage": "Current language"
+  },
+  "education": {
+    "xii": {
+      "title": "Senior Secondary (XII) — PCM",
+      "school": "Karmaneya School of Excellence",
+      "role": "Physics, Chemistry & Mathematics",
+      "period": "2023"
+    },
+    "systems": {
+      "title": "Self-Directed Specialization in AI Systems",
+      "school": "Independent Research & Open Source",
+      "role": "AI Infrastructure, Agent Graphs, Distributed Cloud",
+      "period": "2023 – Present"
+    }
+  },
+  "customProjects": {
+    "outreach": {
+      "title": "Outreach — Autonomous AI Outbound Pipeline & Prospecting Platform",
+      "description": "Autonomous B2B outbound prospecting engine discovering high-intent accounts, identifying decision-makers, and generating hyper-personalized pitches with DeepSeek AI.",
+      "longDescription": "Outreach is a production-grade autonomous outbound pipeline and prospecting platform. It discovers high-intent B2B accounts, identifies key decision-makers, extracts and verifies contact emails, and crafts hyper-personalized pitches using DeepSeek AI. Built with a Next.js 14 responsive dashboard and a robust FastAPI backend with Celery distributed workers, Redis caching/broker, and PostgreSQL database, it automates cold outreach campaigns with multi-inbox deliverability management.",
+      "features": [
+        "Autonomous B2B account discovery and intent filtering pipeline",
+        "DeepSeek AI integration for hyper-personalized pitch and cold email generation",
+        "Asynchronous Celery task execution with Redis queue for high-throughput dispatch",
+        "Comprehensive domain deliverability management and multi-inbox warmup tracking"
+      ],
+      "challenges": [
+        "Designing contextual prompt orchestration with DeepSeek AI to avoid generic outreach templates",
+        "Managing rate-limiting and task retry cascades across distributed Celery worker nodes",
+        "Preventing cold domain burn through automated SPF/DKIM verification and warmup ramping"
+      ]
+    },
+    "ai-director": {
+      "title": "AI Director — Distributed Video Production Platform",
+      "description": "Novel AI → structured scene definition → deterministic rendering architecture that generates animations, motion graphics, and captions without arbitrary code execution.",
+      "longDescription": "AI Director is an open-source distributed video production platform and deterministic rendering engine. Instead of relying on brittle, nondeterministic code generation, it translates user prompts and creative scripts into a structured JSON scene definition, which is then rendered with pixel-perfect reproducibility using Remotion. The backend powers an asynchronous cloud rendering pipeline on AWS: SQS message queues ingest render jobs and trigger auto-scaling ECS/Fargate container fleets. FFmpeg handles multi-track compositing, stitching, audio mastering, and cross-format encoding.",
+      "features": [
+        "Deterministic scene definition engine generating motion graphics, captions, and transitions safely",
+        "Asynchronous cloud rendering pipeline on AWS ECS/Fargate with SQS auto-scaling queues",
+        "FFmpeg composition engine for audio leveling, subtitle burning, and parallel chunk encoding",
+        "Multi-aspect ratio export (9:16 vertical shorts, 16:9 cinematic landscape, 1:1 square)"
+      ],
+      "challenges": [
+        "Eliminating nondeterministic layout bugs in headless Chromium container rendering",
+        "Managing spot container autoscaling and task retries under bursty video render workloads",
+        "Optimizing FFmpeg rendering time and CPU core utilization across concurrent video jobs"
+      ]
+    },
+    "lucy": {
+      "title": "Lucy — AI Shopping Agent with Model Context Protocol",
+      "description": "Conversational AI personal stylist that discovers suitable products via Shopify API and structured MCP (Model Context Protocol) tool orchestration.",
+      "longDescription": "Lucy is an autonomous personal styling agent built on the open Model Context Protocol (MCP). It interacts with shoppers through natural conversation, extracting style preferences, fit requirements, and budget constraints. Rather than guessing inventory, Lucy invokes structured MCP tools connecting directly to Shopify APIs, dynamically filtering live product catalogs and returning curated recommendations with real-time stock verification.",
+      "features": [
+        "Model Context Protocol (MCP) server integration for structured e-commerce tool execution",
+        "Dynamic multi-constraint filter extraction (price bounds, colorways, categories, inventory)",
+        "Natural dialogue styling recommendations with rich interactive product cards"
+      ],
+      "challenges": [
+        "Implementing strict MCP protocol schema validation for zero-hallucination tool calls",
+        "Gracefully reconciling conflicting user stylistic preferences during multi-turn chats"
+      ]
+    },
+    "lead-catcher": {
+      "title": "Lead Catcher — AI Voice Receptionist for Real Estate",
+      "description": "Scalable, multi-tenant voice AI platform that handles inbound/outbound calls to qualify real estate leads 24/7 with strict data isolation.",
+      "longDescription": "Lead Catcher is a production-grade, multi-tenant AI voice platform engineered for real estate agencies. It manages inbound and outbound call pipelines around the clock to qualify buyer and seller leads with strict data isolation enforced via company_id. At its core is a real-time streaming pipeline processing Base64 μ-law 8kHz audio with sub-second latency across Twilio WebSockets, Deepgram Speech-to-Text, OpenAI GPT-4o, and Deepgram Text-to-Speech.",
+      "features": [
+        "Multi-tenant voice AI platform qualifying real estate leads 24/7 with strict company_id isolation",
+        "Real-time streaming pipeline (Twilio WebSocket → Deepgram STT → OpenAI GPT-4o → Deepgram TTS)",
+        "Sub-second latency voice streaming over Base64 μ-law 8kHz audio packets",
+        "PostgreSQL SELECT FOR UPDATE SKIP LOCKED queue workers for resilient CRM job dispatch",
+        "Argon2id password hashing and JWT token authentication with enterprise audit readiness"
+      ],
+      "challenges": [
+        "Achieving sub-second voice round-trip latency across distributed WebSocket hops",
+        "Preventing tenant cross-talk and memory leakage in streaming audio concurrency",
+        "Ensuring reliable CRM dispatch during HubSpot rate limits via exponential backoff workers"
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "metaDescription": "How this website handles your personal information: data collected, third-party services, local storage, consent and your rights (Law 25, GDPR)."
+  },
+  "legal": {
+    "title": "Legal notice",
+    "metaDescription": "Legal notice for Vansh Singh’s website: publisher, hosting, intellectual property, credits and governing law."
+  },
+  "ui": {
+    "announce": "Software, AI and web — an idea to share?",
+    "announceCta": "Write",
+    "openToWork": "Open to AI & Backend Roles",
+    "localTime": "Local time",
+    "heroTitle1": "Engineering",
+    "heroTitle2": "AI systems",
+    "heroTitle3": "& architectures",
+    "heroLead": "Self-taught AI Engineer & Backend Developer building production-grade voice AI, cloud video rendering pipelines, and open-source developer tooling.",
+    "ctaProjects": "See projects",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll",
+    "manifesto": [
+      "Automate",
+      "Integrate",
+      "Deploy"
+    ],
+    "manifestoSub": "Software, AI and cloud serving real-world operations.",
+    "aboutKicker": "Profile",
+    "aboutTitle": "From code to operations",
+    "aboutAI": "VOICE AI",
+    "aboutAIText": "Streaming WebSocket voice pipelines with Deepgram STT/TTS and GPT-4o achieving sub-second latency.",
+    "aboutOps": "SYSTEMS",
+    "aboutOpsText": "PostgreSQL SELECT FOR UPDATE SKIP LOCKED queues, multi-tenant isolation, and JWT/Argon2id authentication.",
+    "aboutCloud": "CLOUD",
+    "aboutCloudText": "Scalable asynchronous rendering pipelines on AWS ECS/Fargate, SQS message queues, and Docker.",
+    "aboutDesign": "TOOLING",
+    "aboutDesignText": "Developer workspace intelligence, Model Context Protocol (MCP) tool orchestration, and deterministic video generation.",
+    "stackKicker": "Stack",
+    "pathKicker": "Path",
+    "impactKicker": "Results",
+    "projectsKicker": "Work",
+    "contactKicker": "Contact",
+    "contactTitle": "Let's work together",
+    "footerTagline": "AI Engineer & Backend Developer — Nagpur, India.",
+    "footerSections": "Sections",
+    "footerSocial": "Social",
+    "present": "Present",
+    "projectsLead": "Internal software, applied AI, connected devices and a few websites: a selection designed, built and shipped end to end.",
+    "dragHint": "Scroll",
+    "cursorView": "View",
+    "cursorOpen": "Open",
+    "cursorWrite": "Write",
+    "caseStudy": "Case study",
+    "caseStats": "Key figures",
+    "statYear": "Year",
+    "statusLabel": "Status",
+    "typeLabel": "Type",
+    "hoverReveal": "Hover for colour",
+    "whatItDoes": "What it does",
+    "howItWasSolved": "How it was solved",
+    "nextProject": "Next project",
+    "readCase": "Read the case study",
+    "indexTitle": "Index",
+    "caseStudies": "Case studies",
+    "totalEntries": "Entries",
+    "colProject": "Project",
+    "colStack": "Language",
+    "colYear": "Year",
+    "noResults": "No results",
+    "noResultsHint": "Try another term or language",
+    "search": "Search",
+    "searchPlaceholder": "Name, tech, keyword…",
+    "clearSearch": "Clear search",
+    "filterLanguage": "Language",
+    "all": "All",
+    "lostSignal": "Signal lost",
+    "notFoundTitle": "This page dissolved into the grid.",
+    "notFoundText": "The page you are looking for does not exist or has moved.",
+    "backHome": "Back home",
+    "readMore": "Read more",
+    "readLess": "Show less",
+    "credits": "Design & code",
+    "journeyKicker": "CONNECTIVITY // GLOBAL ECOSYSTEM",
+    "journeyFrom": "Base Location",
+    "journeyTo": "Global Open Source",
+    "journeyText": "Engineering high-performance AI systems, building production-grade developer tooling, and collaborating with global open-source communities.",
+    "journeySr": "Connecting from Nagpur to global open source: {{km}} km.",
+    "showAll": "Show all",
+    "gallery": "Gallery",
+    "galleryTitle": "In the wild",
+    "galleryHint": "Live captures · hover for colour",
+    "galleryHintDiagrams": "Diagrams · no screenshots of internal tools",
+    "negativeOn": "Negative mode",
+    "negativeOff": "Back to positive",
+    "negativeHint": "You found the hidden inversion. Same code to flip back.",
+    "negativeBye": "Everything is back in order."
+  },
+  "home": {
+    "title": "Vansh Singh — AI Engineer & Backend Developer",
+    "description": "Portfolio of Vansh Sushil Singh — AI Engineer, Backend Developer and Open-Source Contributor. Real-time voice AI, cloud rendering pipelines, and developer tooling."
+  },
+  "lab": {
+    "kicker": "Lab",
+    "title": "The site, taken apart.",
+    "cta": "Open the Lab",
+    "components": "components dissected",
+    "experiments": "experiments",
+    "easterEgg": "Easter egg"
+  }
+}

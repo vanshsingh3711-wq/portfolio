@@ -1,0 +1,48 @@
+import { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Seo } from '../components/Seo';
+import { ArrowLeft } from 'lucide-react';
+import { SplitText } from '../components/ui/Kinetic';
+
+const DitherHero = lazy(() => import('../components/webgl/DitherHero'));
+
+export function NotFoundPage() {
+  const { t } = useTranslation();
+
+  return (
+    <main className="grain relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-ink text-paper">
+      <Seo noindex path="/404" title="404 | Vansh Singh" description="Page not found." />
+      <Suspense fallback={null}>
+        <DitherHero centered />
+      </Suspense>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#050505_75%)]" aria-hidden="true" />
+
+      <div className="relative z-10 flex flex-1 flex-col justify-between px-4 py-8 sm:px-6 md:px-10">
+        <div className="label flex justify-between">
+          <span>Error · 404</span>
+          <span>{t('ui.lostSignal')}</span>
+        </div>
+
+        <div className="text-center">
+          <SplitText as="h1" trigger="intro" text="404" className="display block text-[clamp(8rem,32vw,30rem)] leading-[0.8] mix-blend-difference" />
+          {/* Panneau opaque : le texte reste lisible même posé sur la sphère */}
+          <div className="mx-auto mt-6 max-w-xl border border-line bg-ink/90 px-5 py-4 backdrop-blur-sm">
+            <p className="heading text-[clamp(1.5rem,3vw,2.5rem)]">{t('ui.notFoundTitle')}</p>
+            <p className="mx-auto mt-2 max-w-md text-paper/70">{t('ui.notFoundText')}</p>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
+            <Link to="/" className="btn-solid" data-magnetic>
+              <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" /> {t('ui.backHome')}
+            </Link>
+            <Link to="/projects" className="btn-ghost" data-magnetic>
+              {t('projects.allProjects')}
+            </Link>
+          </div>
+        </div>
+
+        <p className="label text-center">© {new Date().getFullYear()} Vansh Singh</p>
+      </div>
+    </main>
+  );
+}

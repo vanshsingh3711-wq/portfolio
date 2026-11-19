@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics removed for mobile performance (330 KiB saved) -->
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO : balises de l'accueil. Chaque page les remplace via <Seo> (data-rh = gérées par Helmet),
+         et le pré-rendu (scripts/prerender.mjs) les écrit déjà dans le HTML statique de chaque page. -->
+    <meta name="description" content="Vansh Sushil Singh — AI Engineer, Backend Developer and Open-Source Contributor. Real-time voice AI, cloud video rendering pipelines, and developer tooling." data-rh="true" />
+    <meta name="robots" content="index, follow, max-image-preview:large" data-rh="true" />
+    <meta name="author" content="Vansh Sushil Singh" />
+    <link rel="canonical" href="https://vanshsingh.dev/" data-rh="true" />
+    <link rel="alternate" hreflang="en" href="https://vanshsingh.dev/" data-rh="true" />
+    <link rel="alternate" hreflang="fr" href="https://vanshsingh.dev/?lang=fr" data-rh="true" />
+    <link rel="alternate" hreflang="x-default" href="https://vanshsingh.dev/" data-rh="true" />
+
+    <!-- Localisation -->
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Nagpur, Maharashtra, India" />
+    <meta name="geo.position" content="21.1458;79.0882" />
+    <meta name="ICBM" content="21.1458, 79.0882" />
+
+    <!-- Fichiers pour humains et IA -->
+    <link rel="author" href="/humans.txt" />
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM summary" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="application-name" content="Portfolio | Vansh Singh" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" imagesrcset="/assets/logo-400.webp 400w, /assets/logo-800.webp 800w, /assets/logo.webp 1364w" imagesizes="(max-width: 768px) 400px, (max-width: 1024px) 800px, 1364px" fetchpriority="high" type="image/webp" />
+    <link rel="preconnect" href="https://o4510394913456128.ingest.de.sentry.io" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Polices chargées sans bloquer le premier rendu -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" /></noscript>
+
+    <!-- Open Graph / Twitter (accueil ; remplacés par page) -->
+    <meta property="og:type" content="profile" data-rh="true" />
+    <meta property="og:site_name" content="Vansh Singh" data-rh="true" />
+    <meta property="og:locale" content="en_US" data-rh="true" />
+    <meta property="og:url" content="https://vanshsingh.dev/" data-rh="true" />
+    <meta property="og:title" content="Vansh Singh — AI Engineer & Backend Developer" data-rh="true" />
+    <meta property="og:description" content="Portfolio of Vansh Sushil Singh — AI Engineer, Backend Developer and Open-Source Contributor. Real-time voice AI, cloud video rendering pipelines, and developer tooling." data-rh="true" />
+    <meta property="og:image" content="https://vanshsingh.dev/assets/art/og-cover.png" data-rh="true" />
+    <meta property="og:image:alt" content="Vansh Singh — AI Engineer & Backend Developer" data-rh="true" />
+    <meta name="twitter:card" content="summary_large_image" data-rh="true" />
+    <meta name="twitter:title" content="Vansh Singh — AI Engineer & Backend Developer" data-rh="true" />
+    <meta name="twitter:description" content="Portfolio of Vansh Sushil Singh — AI Engineer, Backend Developer and Open-Source Contributor. Real-time voice AI, cloud video rendering pipelines, and developer tooling." data-rh="true" />
+    <meta name="twitter:image" content="https://vanshsingh.dev/assets/art/og-cover.png" data-rh="true" />
+    <meta name="twitter:image:alt" content="Vansh Singh — AI Engineer & Backend Developer" data-rh="true" />
+
+    <!-- Données structurées : la personne et le site (communes à toutes les pages) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://vanshsingh.dev/#person",
+          "name": "Vansh Sushil Singh",
+          "url": "https://vanshsingh.dev/",
+          "image": "https://vanshsingh.dev/assets/art/og-cover.png",
+          "jobTitle": "AI Engineer · Backend Developer · Open-Source Contributor",
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "Karmaneya School of Excellence" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nagpur",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://github.com/vanshsingh3711-wq",
+            "https://www.linkedin.com/in/vanshsingh3711"
+          ],
+          "knowsAbout": [
+            "AI Engineering", "Python", "FastAPI", "TypeScript", "React", "Next.js",
+            "AWS", "Twilio", "Deepgram", "Model Context Protocol (MCP)", "Remotion",
+            "PostgreSQL", "Docker", "FFmpeg", "LangChain", "LangGraph"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://vanshsingh.dev/#website",
+          "name": "Vansh Singh",
+          "url": "https://vanshsingh.dev/",
+          "inLanguage": ["en", "fr"],
+          "author": { "@id": "https://vanshsingh.dev/#person" },
+          "description": "Portfolio of Vansh Sushil Singh, AI Engineer and Backend Developer: real-time voice streaming systems, cloud video pipelines, and developer tooling."
+        }
+      ]
+    }
+    </script>
+
+    <title>Vansh Singh — AI Engineer & Backend Developer</title>
+
+    <style>
+      /* CSS critique : écran de démarrage affiché avant le JavaScript (premier rendu immédiat) */
+      html, body { background-color: #050505; margin: 0; padding: 0; color: #f2f2ee; }
+      .shell { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; justify-content: space-between;
+        padding: 20px 16px; background: #050505; color: #f2f2ee; font-family: 'Geist Mono', ui-monospace, Consolas, monospace; }
+      .shell-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+      .shell-count { font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 300; line-height: .78;
+        font-size: clamp(7rem, 26vw, 24rem); font-variant-numeric: tabular-nums; }
+      .shell-bar { margin-top: 16px; height: 1px; background: rgba(242,242,238,.12); }
+      .shell-bar i { display: block; height: 1px; background: #f2f2ee; transform-origin: left; transform: scaleX(0); transition: transform .3s; }
+      .shell-quiet .shell-top, .shell-quiet .shell-count, .shell-quiet .shell-bar { visibility: hidden; }
+      @media (min-width: 768px) { .shell { padding: 32px 40px; } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="shell" id="shell" role="status" aria-label="Loading">
+        <div class="shell-top"><span>Vansh Singh — Portfolio</span><span>©2026</span></div>
+        <div>
+          <span class="shell-count" id="shell-count">000</span>
+          <div class="shell-bar"><i id="shell-bar"></i></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Compteur pendant le chargement du JavaScript ; le préchargeur React reprend à cette valeur
+      (function () {
+        var quiet = false;
+        try { quiet = sessionStorage.getItem('cd-intro-seen') === '1' || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+        var el = document.getElementById('shell');
+        if (quiet) { el.className += ' shell-quiet'; return; }
+        var c = document.getElementById('shell-count'), bar = document.getElementById('shell-bar'), v = 0;
+        window.__plCount = 0;
+        var id = setInterval(function () {
+          if (!document.getElementById('shell-count')) return clearInterval(id);
+          v = Math.min(60, v + Math.max(1, (60 - v) * 0.08));
+          window.__plCount = v;
+          c.textContent = ('00' + Math.round(v)).slice(-3);
+          bar.style.transform = 'scaleX(' + v / 100 + ')';
+        }, 60);
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

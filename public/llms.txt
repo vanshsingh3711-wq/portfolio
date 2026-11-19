@@ -1,0 +1,40 @@
+# Christen Dijoux
+
+> Full-stack & AI developer based in Saguenay, Québec (Canada). Digital Innovation Specialist at Gagnon Frères and co-founder of Synaptia Web. Builds internal platforms, automation and applied AI for operations, and web experiences where WebGL, motion and typography meet solid engineering. The site is available in English (default) and French (`?lang=fr`).
+
+## Profile
+
+- Name: Christen Dijoux
+- Role: Digital Innovation Specialist @ Gagnon Frères (Feb. 2026 – present) — internal applications and APIs, Dynamics NAV and Azure integrations, data-monitoring bots, observability (New Relic, Cloudflare), CI/CD, applied AI and assistants.
+- Studio: co-founder & web developer @ Synaptia Web (Apr. 2025 – present) — showcase sites and Shopify stores.
+- Previously: full-stack & DevOps developer @ CTREQ (Mar. – Aug. 2025) — sole developer of the headless Next.js + WordPress redesign.
+- Education: Multimedia Integration Techniques, Cégep de Jonquière (2021 – 2025).
+- Location: Saguenay, Québec, Canada · works on-site and remotely.
+- Contact: christen.dijoux@gmail.com · [LinkedIn](https://www.linkedin.com/in/christen-dijoux) · [GitHub](https://github.com/Akiyo974)
+
+## Main pages
+
+- [Home](https://christendijoux.com/): introduction, expertise, experience, selected projects, contact.
+- [Projects](https://christendijoux.com/projects): full index of case studies and GitHub repositories.
+- [Lab](https://christendijoux.com/lab): every component of the site dissected live (role, why it exists, how it works, honest verdict) plus free experiments — Gray-Scott reaction-diffusion on the GPU, particle typography, flow field.
+- [Resume](https://christendijoux.com/cv): screen and print versions; PDFs in [English](https://christendijoux.com/assets/cv-christen-dijoux-en.pdf) and [French](https://christendijoux.com/assets/cv-christen-dijoux-fr.pdf).
+
+## Case studies
+
+- [CTREQ — Quebec educational platform](https://christendijoux.com/project/ctreq) (2025): merger of two WordPress sites into a headless Next.js 13 platform; migration of 10+ content types, triple cache (~50 ms), SEO, handover plan.
+- [AkiWorkspace — productivity workspace](https://christendijoux.com/project/akiworkspace) (2026): SaaS for ideas, notes, tasks and projects with hardened security and granular sharing.
+- [Portfolio Watch — Galaxy Watch edition](https://christendijoux.com/project/portfolio-watch) (2026, v0.6.0, in development): this portfolio as a standalone Wear OS app (Kotlin, Jetpack Compose) running on a Galaxy Watch, with its own watch face (Watch Face Format: step ring, weather, current city), a Wear OS tile, a QR business card and an FR / EN switch; code on [GitHub](https://github.com/Akiyo974/portfolio-watch).
+- [Gagnon Frères — internal software and AI for a retailer](https://christendijoux.com/project/gagnon-freres) (2026, current role): digital innovation specialist in a five-person IT team at a Quebec retailer with 7 stores; designed and built the internal platform, an in-store customer reception tool, a tablet sales app connected to the Dynamics NAV ERP and an AI assistant over ERP data; Azure architecture, GitHub organization and repository security. Internal tools, no public code.
+- [Badger — apps and Badge Studio for the GitHub Universe '26 badge](https://christendijoux.com/project/badger) (2026, in development): MicroPython apps for the Badger 2350 (Bluetooth Radar, GitHub stats and QR codes, pedometer, Mona Pet, Duck Maze), [Badge Studio](https://akiyo974.github.io/badger/), a browser app store that talks to the badge over Web Serial, and Badger Remote, a Wear OS app that drives the badge over Bluetooth LE; code on [GitHub](https://github.com/Akiyo974/badger).
+- [Fort Mason Octodex](https://christendijoux.com/project/mona-game) (2026, team project): a GitHub monster-collector game built with four teammates at GitHub Day of Learning, in one HTML file (canvas, Web Audio), where the badge becomes a controller and second screen over Web Serial; I wrote most of it (39 of 47 commits); [play it](https://akiyo974.github.io/Mona-Game/).
+- [CTREQ blog / archive](https://christendijoux.com/project/ctreq-blog-archive) (2025): headless React + WPGraphQL archive with automatic age-based filtering.
+- [Digital innovations in vocational training](https://christendijoux.com/project/innovations-numeriques-fp) (2024): interactive web app for ECOBES (Cégep de Jonquière) and CTREQ showcasing 40+ teachers' innovations.
+- [Webana](https://christendijoux.com/project/webana) (2024), [AkiProject](https://christendijoux.com/project/akiproject) (2023), [AkiMusic](https://christendijoux.com/project/akimusic) (2023): earlier school and demo projects.
+
+## Skills
+
+TypeScript, React, Next.js, Node.js, Python · WebGL / GLSL, GSAP, Canvas, creative coding · headless WordPress, GraphQL, REST · Power Platform, Dynamics NAV, Azure · automation (n8n, Power Automate), applied generative AI · DevOps, CI/CD, Cloudflare, monitoring.
+
+## About this site
+
+React 18 + TypeScript + Vite, raw WebGL (no 3D library), GSAP + Lenis, i18next. Every page is pre-rendered to static HTML for crawlers. Analytics only load after consent. Source: [github.com/Akiyo974/portfolio](https://github.com/Akiyo974/portfolio) (showcase, all rights reserved).

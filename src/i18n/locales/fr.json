@@ -1,0 +1,428 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact",
+    "cv": "CV",
+    "lab": "Lab",
+    "navigation": "Navigation"
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "project": "Projet"
+  },
+  "hero": {
+    "location": "Nagpur, Inde",
+    "region": "Maharashtra, Inde",
+    "role": "Ingénieur IA & Développeur Back-End",
+    "roleDetail": "FastAPI · Python · Next.js · TypeScript · AWS",
+    "tagline": "Ingénieur IA & Contributeur Open Source"
+  },
+  "about": {
+    "title": "À propos",
+    "intro": "Ingénieur IA et Développeur Back-End autodidacte, spécialisé dans la conception d'applications IA de niveau production, de plateformes SaaS multi-tenants, de systèmes d'IA vocale temps réel et de pipelines de génération vidéo déterministes avec Python, TypeScript, FastAPI, Next.js et AWS (ECS, Fargate, SQS).",
+    "expertise": "Mon expertise couvre les pipelines de voix en streaming temps réel (Twilio WebSockets, Deepgram STT/TTS, OpenAI GPT-4o), le rendu vidéo déterministe avec Remotion, le traitement asynchrone sur AWS ECS/Fargate, et l'orchestration d'outils d'agents via le Model Context Protocol (MCP).",
+    "passion": "Passionné par les outils pour développeurs, les agents IA et l'infrastructure open source. Je contribue à des passerelles IA haute performance comme LiteLLM et à des moteurs de synthèse vocale neuronale locale comme VoiceStudio.",
+    "viewCV": "Voir le CV",
+    "downloadCV": "Télécharger le CV",
+    "education": "Formations",
+    "skills": "Compétences",
+    "interests": "Domaines d'expertise",
+    "interestsList": [
+      "Agents IA & Orchestration multi-acteurs",
+      "IA Vocale & Systèmes de streaming temps réel",
+      "Architectures de rendu vidéo déterministes",
+      "Outils pour développeurs & Intelligence de code",
+      "Model Context Protocol (MCP) & Tool-Use",
+      "Systèmes distribués & Infrastructure Cloud (AWS)",
+      "Passerelles IA à haut débit"
+    ],
+    "experience": "Expérience professionnelle",
+    "experienceList": [
+      {
+        "title": "AI Voice Platform Architect",
+        "company": "Lead Catcher",
+        "period": "2026",
+        "description": "Built a scalable, multi-tenant voice AI platform that qualifies real estate leads 24/7 with strict company isolation, sub-second latency Twilio WebSocket streaming, and PostgreSQL SELECT FOR UPDATE SKIP LOCKED workers.",
+        "highlights": [
+          "Real-time streaming pipeline (Twilio → Deepgram → GPT-4o → Deepgram)",
+          "Sub-second latency with Base64 μ-law 8kHz audio",
+          "PostgreSQL SELECT FOR UPDATE SKIP LOCKED CRM workers",
+          "Argon2id password hashing & JWT authentication audit"
+        ]
+      },
+      {
+        "title": "Ingénieur Rendu Vidéo Distribué",
+        "company": "AI Director",
+        "period": "2026",
+        "description": "Conception d'une architecture novatrice IA → spécification de scène structurée → rendu déterministe générant animations, titrages et motion graphics sans code arbitraire.",
+        "highlights": [
+          "Spécification de scènes déterministe avec Remotion",
+          "Rendu cloud asynchrone sur AWS ECS/Fargate et files SQS",
+          "Composition multi-piste et encodage audio/vidéo avec FFmpeg"
+        ]
+      },
+      {
+        "title": "Ingénieur Systèmes de Prospection Autonomes",
+        "company": "Outreach",
+        "period": "2026",
+        "description": "Architecture d'une plateforme de prospection B2B autonome identifiant les comptes à forte intention, vérifiant les décideurs et générant des e-mails hyper-personnalisés avec DeepSeek AI.",
+        "highlights": [
+          "Découverte autonome de comptes B2B et qualification d'intention",
+          "Génération contextuelle de messages par DeepSeek AI",
+          "Files de tâches distribuées avec FastAPI, Celery et Redis",
+          "Gestion de délivrabilité multi-inbox et préchauffage de domaine"
+        ]
+      },
+      {
+        "title": "Ingénieur Agents Autonomes",
+        "company": "Lucy (Agent Shopping IA)",
+        "period": "2026",
+        "description": "Developed an AI personal stylist agent that discovers suitable products via Shopify API and structured MCP (Model Context Protocol) tool orchestration.",
+        "highlights": [
+          "Model Context Protocol (MCP) tool-use integration",
+          "Shopify GraphQL catalog filtering & inventory checks",
+          "Conversational styling and constraint solving"
+        ]
+      }
+    ],
+    "impact": "Impact & résultats",
+    "impactList": [
+      "Conception d'un pipeline vocal streaming temps réel à latence sous la seconde (Twilio → Deepgram → GPT-4o → Deepgram)",
+      "Architecture d'un pipeline de rendu vidéo asynchrone auto-évolutif sur AWS ECS/Fargate et files SQS",
+      "Implémentation de workers PostgreSQL SELECT FOR UPDATE SKIP LOCKED pour la synchronisation HubSpot CRM",
+      "Moteur de définition de scènes déterministe pour la génération vidéo Remotion au pixel près",
+      "Contributions à des projets open source à fort impact dont LiteLLM (20k+ étoiles) et VoiceStudio"
+    ]
+  },
+  "projects": {
+    "title": "Projets sélectionnés",
+    "allProjects": "Tous les projets",
+    "viewAll": "Voir tous les projets",
+    "demo": "Voir le site",
+    "viewSiteProduction": "Voir le site",
+    "viewSiteDemo": "Voir la démo",
+    "code": "Voir le code",
+    "technologies": "Technologies",
+    "repositories": "Dépôts",
+    "backHome": "Retour à l'accueil",
+    "viewDetails": "Voir les détails",
+    "personalProject": "Projet personnel",
+    "professionalProject": "Expérience professionnelle",
+    "clientProject": "Mandat client",
+    "githubProject": "GitHub",
+    "description": "Index des projets de Vansh Singh : plateformes d'IA en production, agents vocaux temps réel, pipelines vidéo cloud et outillage développeur.",
+    "openSource": "Open source",
+    "openSourceTitle": "Contributions",
+    "openSourceIntro": "Des pull requests dans les projets d'autres équipes : {{count}} déjà fusionnées.",
+    "prsMerged_one": "{{count}} PR fusionnée",
+    "prsMerged_other": "{{count}} PR fusionnées",
+    "prsOpen_one": "{{count}} PR ouverte",
+    "prsOpen_other": "{{count}} PR ouvertes"
+  },
+  "projectDetail": {
+    "back": "Retour",
+    "notFound": "Projet non trouvé",
+    "backToProjects": "Retour aux projets",
+    "personalProject": "Projet personnel",
+    "professionalProject": "Expérience professionnelle",
+    "clientProject": "Mandat client",
+    "viewSite": "Voir le site",
+    "viewDemo": "Voir la démo",
+    "sourceCode": "Code source",
+    "about": "À propos du projet",
+    "features": "Fonctionnalités principales",
+    "challenges": "Défis techniques",
+    "languages": "Langages",
+    "technologies": "Technologies",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Outils",
+    "tags": "Tags",
+    "relatedProjects": "Projets en lien",
+    "allProjects": "Voir tous les projets",
+    "status": {
+      "completed": "Terminé",
+      "inProgress": "En cours",
+      "archived": "Archivé"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Restons en contact",
+    "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "messagePlaceholder": "Votre message...",
+    "successMessage": "Message envoyé avec succès !",
+    "errorMessage": "Erreur lors de l'envoi du message."
+  },
+  "chatbot": {
+    "welcome": "👋 Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+    "typing": "En train d'écrire...",
+    "placeholder": "Tapez votre message...",
+    "assistant": "Assistant",
+    "teaser": "Une question sur mon travail ? Demandez à mon assistant.",
+    "dismiss": "Masquer l'invitation",
+    "open": "Ouvrir le chat",
+    "status": "En ligne · réponses locales",
+    "reset": "Nouvelle conversation",
+    "expand": "Agrandir",
+    "minimize": "Réduire",
+    "close": "Fermer",
+    "send": "Envoyer"
+  },
+  "game": {
+    "title": "Jeu des étoiles",
+    "headline": "Chasse aux signaux",
+    "unlocked": "3 / 3 étoiles trouvées — jeu débloqué",
+    "best": "Votre record",
+    "rule1": "20 secondes pour attraper un maximum d'étoiles. Elles disparaissent de plus en plus vite.",
+    "rule2": "Les étoiles inversées (carré blanc) valent 3 points.",
+    "rule3": "Enchaînez les clics rapides : le multiplicateur monte jusqu’à ×4.",
+    "start": "Lancer la partie",
+    "later": "Plus tard",
+    "score": "Score",
+    "close": "Fermer le jeu",
+    "star": "Étoile",
+    "goldenStar": "Étoile bonus",
+    "over": "Partie terminée",
+    "newRecord": "Nouveau record personnel !",
+    "enterNickname": "Vos initiales (3 lettres)",
+    "submit": "Enregistrer",
+    "rank": "Classé n° {{rank}}",
+    "submitError": "Le score n'a pas pu être enregistré.",
+    "restart": "Rejouer",
+    "backToSite": "Retour au site",
+    "leaderboard": "Classement",
+    "offline": "Classement en ligne indisponible — votre record est gardé sur cet appareil.",
+    "found": "Étoile trouvée",
+    "hintHero": "Indice : tout en haut de l'accueil.",
+    "hintContact": "Indice : près du formulaire de contact.",
+    "hintFooter": "Indice : tout en bas de la page.",
+    "unlockedToast": "Toutes les étoiles sont trouvées — un jeu se débloque…",
+    "starFound": "Étoile trouvée",
+    "hiddenStar": "Étoile cachée",
+    "play": "Jouer au jeu des étoiles",
+    "huntHint": "Des étoiles sont cachées sur le site…",
+    "starsFound": "étoiles trouvées"
+  },
+  "footer": {
+    "description": "Conception d'applications IA de production, systèmes de voix streaming temps réel, moteurs de rendu vidéo déterministes et outils pour développeurs.",
+    "location": "Localisation",
+    "backToTop": "Retour en haut",
+    "allRightsReserved": "Tous droits réservés",
+    "manageCookies": "Gérer les cookies"
+  },
+  "cookieConsent": {
+    "acceptShort": "Accepter",
+    "declineShort": "Refuser",
+    "title": "🍪 Cookies et confidentialité",
+    "description": "Ce site utilise des cookies pour améliorer votre expérience (Google Analytics, préférences) et suivre les erreurs techniques (Sentry). Vos données sont protégées conformément au RGPD.",
+    "privacyLink": "politique de confidentialité",
+    "accept": "Accepter tous les cookies",
+    "decline": "Refuser les cookies non essentiels",
+    "details": "Cookies essentiels : langue, consentement. Cookies analytiques : Google Analytics (anonymisé)."
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu principal",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "toggleLanguage": "Changer de langue",
+    "currentLanguage": "Langue actuelle"
+  },
+  "education": {
+    "xii": {
+      "title": "Études secondaires supérieures (XII) — PCM",
+      "school": "Karmaneya School of Excellence",
+      "role": "Physique, Chimie & Mathématiques",
+      "period": "2023"
+    },
+    "systems": {
+      "title": "Spécialisation autodidacte en Systèmes IA",
+      "school": "Recherche indépendante & Open Source",
+      "role": "Infrastructure IA, Graphes d'Agents, Cloud Distribué",
+      "period": "2023 – Présent"
+    }
+  },
+  "customProjects": {
+    "outreach": {
+      "title": "Outreach — Plateforme Autonome de Prospection B2B par IA",
+      "description": "Moteur autonome de prospection B2B identifiant les comptes à forte intention, découvrant les décideurs et générant des approches hyper-personnalisées avec DeepSeek AI.",
+      "longDescription": "Outreach est une plateforme de prospection commerciale et de pipeline sortant pilotée par IA. Elle identifie les comptes B2B cibles, découvre les décideurs techniques, extrait et valide les adresses e-mail, et formule des messages sur mesure grâce à DeepSeek AI. Développé avec un tableau de bord Next.js 14 et un backend FastAPI à haute performance utilisant des workers Celery, un courtier Redis et PostgreSQL, il automatise l'envoi d'e-mails et la délivrabilité multi-inbox.",
+      "features": [
+        "Pipeline autonome d'identification de comptes B2B et filtrage par intention d'achat",
+        "Intégration de DeepSeek AI pour la génération de messages et d'e-mails hyper-personnalisés",
+        "Exécution asynchrone par workers Celery et Redis pour un débit d'envoi optimal",
+        "Gestion proactive de la délivrabilité des domaines et suivi du préchauffage multi-inbox"
+      ],
+      "challenges": [
+        "Orchestration contextuelle des invites avec DeepSeek AI pour éviter les formulations génériques",
+        "Gestion fine des quotas et cascades de réessais sur des nœuds Celery distribués",
+        "Protection de la réputation de domaine via vérification SPF/DKIM et montée en charge graduelle"
+      ]
+    },
+    "ai-director": {
+      "title": "AI Director — Plateforme Distribuée de Production Vidéo",
+      "description": "Architecture novatrice IA → spécification de scène structurée → rendu déterministe générant des animations, titrages et motion graphics sans code arbitraire.",
+      "longDescription": "Plateforme de production vidéo distribuée open source et moteur de rendu déterministe. Au lieu de reposer sur une génération de code instable, elle convertit les scripts et requêtes créatives en une spécification JSON structurée rendue fidèlement au pixel près via Remotion. Le backend pilote un pipeline cloud asynchrone sur AWS : files SQS déclenchant des flottes de conteneurs ECS/Fargate auto-évolutives. FFmpeg assure la composition multi-piste, le mixage audio et l'encodage optimisé.",
+      "features": [
+        "Moteur de définition de scène déterministe générant animations, sous-titres et transitions en toute sécurité",
+        "Pipeline de rendu cloud asynchrone sur AWS ECS/Fargate avec files d'attente SQS auto-évolutives",
+        "Moteur de composition FFmpeg pour l'égalisation audio, l'incrustation de sous-titres et l'encodage parallèle",
+        "Export multi-formats (9:16 vertical pour réseaux sociaux, 16:9 paysage cinématique, 1:1 carré)"
+      ],
+      "challenges": [
+        "Élimination des bugs de mise en page non déterministes dans les conteneurs Chromium headless",
+        "Gestion de l'auto-scaling et des reprises de tâches sur instances spot sous charges de rendu intensives",
+        "Optimisation du temps de calcul et de l'usage multi-cœur de FFmpeg sur des jobs concurrents"
+      ]
+    },
+    "lucy": {
+      "title": "Lucy — Agent Shopping IA avec Model Context Protocol",
+      "description": "Agent personnel de stylisme et d'achat découvrant des produits via l'API Shopify et l'orchestration d'outils structurés Model Context Protocol (MCP).",
+      "longDescription": "Lucy est un agent de stylisme autonome reposant sur le protocole ouvert Model Context Protocol (MCP). Elle échange avec les acheteurs en langage naturel pour identifier leurs goûts, mensurations et contraintes budgétaires. Au lieu d'halluciner des produits, Lucy exécute des outils MCP reliés directement aux API Shopify, filtrant les catalogues en direct et renvoyant des sélections personnalisées avec vérification des stocks en temps réel.",
+      "features": [
+        "Intégration d'un serveur Model Context Protocol (MCP) pour l'exécution d'outils e-commerce sécurisés",
+        "Extraction dynamique de contraintes multi-critères (budgets, coloris, catégories, disponibilités)",
+        "Dialogue naturel avec recommandations sous forme de fiches produits riches et interactives"
+      ],
+      "challenges": [
+        "Validation rigoureuse des schémas MCP pour éliminer les appels d'outils invalides",
+        "Résolution des contradictions stylistiques dans les conversations multi-tours"
+      ]
+    },
+    "lead-catcher": {
+      "title": "Lead Catcher — Réceptionniste Vocale IA pour l'Immobilier",
+      "description": "Plateforme vocale IA multi-tenant à haute évolutivité qualifiant les leads immobiliers 24h/24 et 7j/7 avec cloisonnement strict des données.",
+      "longDescription": "Lead Catcher est une plateforme vocale IA multi-tenant conçue pour les agences immobilières. Elle gère les flux d'appels entrants et sortants en continu pour qualifier acheteurs et vendeurs avec une isolation stricte des données par company_id. Son cœur est un pipeline streaming traitant des paquets audio Base64 μ-law 8kHz à latence sous la seconde reliant Twilio WebSockets, Deepgram Speech-to-Text, OpenAI GPT-4o et Deepgram Text-to-Speech.",
+      "features": [
+        "Plateforme vocale IA multi-tenant qualifiant les leads immobiliers 24/7 avec cloisonnement strict par company_id",
+        "Pipeline streaming temps réel (WebSocket Twilio → Deepgram STT → OpenAI GPT-4o → Deepgram TTS)",
+        "Latence sous la seconde sur flux audio Base64 μ-law 8kHz",
+        "Workers PostgreSQL SELECT FOR UPDATE SKIP LOCKED pour une distribution robuste des jobs CRM",
+        "Hachage Argon2id et authentification par jetons JWT validés par audit de production"
+      ],
+      "challenges": [
+        "Maintien d'une latence aller-retour sous la seconde à travers les sauts de WebSocket distribués",
+        "Prévention absolue du croisement de données et fuites mémoire en forte concurrence audio streaming",
+        "Distribution fiable vers l'API HubSpot avec gestion du backoff exponentiel en cas de saturation de débit"
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "metaDescription": "Comment ce site traite vos renseignements personnels : données collectées, services tiers, stockage local, consentement et vos droits (Loi 25, RGPD)."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "metaDescription": "Mentions légales du site de Vansh Singh : éditeur, hébergement, propriété intellectuelle, crédits et droit applicable."
+  },
+  "ui": {
+    "announce": "Logiciel, IA et web — une idée à partager ?",
+    "announceCta": "Écrire",
+    "openToWork": "À l'écoute d'opportunités (IA & Backend)",
+    "localTime": "Heure locale",
+    "heroTitle1": "Ingénierie",
+    "heroTitle2": "Systèmes IA",
+    "heroTitle3": "& architectures",
+    "heroLead": "Ingénieur IA & Développeur Back-End autodidacte concevant des systèmes d'IA vocale de production, des pipelines vidéo cloud et des outils open source.",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter",
+    "scroll": "Défiler",
+    "manifesto": [
+      "Automatiser",
+      "Intégrer",
+      "Déployer"
+    ],
+    "manifestoSub": "Logiciel, IA et cloud au service des opérations réelles.",
+    "aboutKicker": "Profil",
+    "aboutTitle": "Du code aux opérations",
+    "aboutAI": "Agents & IA appliquée",
+    "aboutAIText": "Agents conversationnels, RAG et intégrations LLM mis en production pour automatiser la recherche d'information et la prise de décision.",
+    "aboutOps": "Automatisation & données",
+    "aboutOpsText": "Pipelines Python, n8n et Power Automate qui synchronisent catalogues, fournisseurs et rapports — moins de tâches manuelles, plus de fiabilité.",
+    "aboutCloud": "Cloud & observabilité",
+    "aboutCloudText": "Azure, DigitalOcean, Cloudflare et New Relic : déploiement, monitoring et alerting pour des systèmes rapides et surveillés.",
+    "aboutDesign": "Interfaces soignées",
+    "aboutDesignText": "Formé en intégration multimédia, je garde le design au cœur du code : chaque outil, même interne, a une interface claire, accessible et agréable à utiliser.",
+    "stackKicker": "Stack",
+    "pathKicker": "Parcours",
+    "impactKicker": "Résultats",
+    "projectsKicker": "Travaux",
+    "contactKicker": "Contact",
+    "contactTitle": "Travaillons ensemble",
+    "footerTagline": "Ingénieur IA & Développeur Backend — Nagpur, Inde.",
+    "footerSections": "Sections",
+    "footerSocial": "Réseaux",
+    "present": "Présent",
+    "projectsLead": "Logiciels internes, IA appliquée, objets connectés et quelques sites : une sélection conçue, développée et déployée de bout en bout.",
+    "dragHint": "Défiler",
+    "cursorView": "Voir",
+    "cursorOpen": "Ouvrir",
+    "cursorWrite": "Écrire",
+    "caseStudy": "Étude de cas",
+    "caseStats": "Chiffres clés",
+    "statYear": "Année",
+    "statusLabel": "Statut",
+    "typeLabel": "Type",
+    "hoverReveal": "Survoler pour la couleur",
+    "whatItDoes": "Ce que ça fait",
+    "howItWasSolved": "Comment c'est résolu",
+    "nextProject": "Projet suivant",
+    "readCase": "Lire l'étude de cas",
+    "indexTitle": "Index",
+    "caseStudies": "Études de cas",
+    "totalEntries": "Entrées",
+    "colProject": "Projet",
+    "colStack": "Langage",
+    "colYear": "Année",
+    "noResults": "Aucun résultat",
+    "noResultsHint": "Essayez un autre terme ou langage",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom, techno, mot-clé…",
+    "clearSearch": "Effacer la recherche",
+    "filterLanguage": "Langage",
+    "all": "Tous",
+    "lostSignal": "Signal perdu",
+    "notFoundTitle": "Cette page s'est dissoute dans la trame.",
+    "notFoundText": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil",
+    "readMore": "Lire la suite",
+    "readLess": "Réduire",
+    "credits": "Design & code",
+    "journeyKicker": "CONNECTIVITÉ // ÉCOSYSTÈME MONDIAL",
+    "journeyFrom": "Localisation",
+    "journeyTo": "Open Source Mondial",
+    "journeyText": "Développement de systèmes d'IA haute performance, création d'outils développeurs de production et collaboration avec les communautés open source mondiales.",
+    "journeySr": "Connexion de Nagpur à l'écosystème open source mondial : {{km}} km.",
+    "showAll": "Voir tout",
+    "gallery": "Galerie",
+    "galleryTitle": "En situation",
+    "galleryHint": "Captures du site en ligne · survoler pour la couleur",
+    "galleryHintDiagrams": "Schémas · aucune capture des outils internes",
+    "negativeOn": "Mode négatif",
+    "negativeOff": "Retour au positif",
+    "negativeHint": "Vous avez trouvé l’inversion cachée. Même code pour revenir.",
+    "negativeBye": "Tout est revenu à l’endroit."
+  },
+  "home": {
+    "title": "Vansh Singh — Ingénieur IA & Développeur Back-End",
+    "description": "Portfolio de Vansh Sushil Singh — Ingénieur IA, Développeur Back-End et Contributeur Open Source."
+  },
+  "lab": {
+    "kicker": "Lab",
+    "title": "Le site, démonté.",
+    "cta": "Ouvrir le Lab",
+    "components": "composants disséqués",
+    "experiments": "expériences",
+    "easterEgg": "Easter egg"
+  }
+}

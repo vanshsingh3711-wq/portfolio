@@ -1,0 +1,19 @@
+# https://www.robotstxt.org/robotstxt.html
+# Tout le site est indexable, y compris les JS/CSS nécessaires au rendu. Les pages privées utilisent une balise noindex.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Robots d'IA : même accès (voir /ai.txt et /llms.txt)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+Sitemap: https://christendijoux.com/sitemap.xml

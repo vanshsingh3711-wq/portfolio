@@ -1,0 +1,7 @@
+# ai.txt — christendijoux.com
+# Résumé structuré pour les modèles de langage : https://christendijoux.com/llms.txt
+# Structured summary for language models: https://christendijoux.com/llms.txt
+
+User-Agent: *
+Allow: /
+Disallow: /api/

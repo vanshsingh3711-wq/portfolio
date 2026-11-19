@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Design & code -- Christen Dijoux
+  Site: https://christendijoux.com
+  Contact: christen.dijoux@gmail.com
+  Location: Saguenay, Québec, Canada
+
+# THANKS
+
+  To the open-source community.
+
+# SITE
+
+  Last update: 2026-10
+  Languages: English, French
+  Standards: HTML5, CSS3, ES2022, WCAG 2.1 AA
+  Components: React 18, TypeScript, Vite, Tailwind CSS
+  Motion & graphics: WebGL / GLSL (no 3D library), GSAP + ScrollTrigger, Lenis, Canvas 2D
+  Content: i18next, react-helmet-async, static pre-rendering for crawlers
+  Backend: PHP (leaderboard API, no database)
+  Hosting: Apache (cPanel) behind Cloudflare
+  Fonts: Big Shoulders Display, Geist, Geist Mono
