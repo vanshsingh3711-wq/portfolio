@@ -33,9 +33,9 @@ export default defineConfig(({ command }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['assets/favicon.ico', 'assets/favicon.svg'],
       manifest: {
-        name: 'Christen Dijoux',
-        short_name: 'Christen Dijoux',
-        description: 'Portfolio interactif de Christen Dijoux - Développeur Full-stack',
+        name: 'Vansh Singh',
+        short_name: 'Vansh Singh',
+        description: 'Portfolio of Vansh Singh — AI Engineer & Backend Developer',
         theme_color: '#050505',
         background_color: '#050505',
         display: 'standalone',
