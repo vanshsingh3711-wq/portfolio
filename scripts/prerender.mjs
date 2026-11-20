@@ -20,8 +20,14 @@ const chrome = [
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   '/usr/bin/google-chrome',
+  '/usr/bin/chromium-browser',
+  '/usr/bin/chromium',
 ].find((p) => p && existsSync(p));
-if (!chrome) throw new Error('Pré-rendu impossible : Chrome introuvable (définir CHROME_PATH)');
+
+if (!chrome) {
+  console.log('⚠️ [prerender] Chrome not found in environment (Vercel/CI). Skipping static prerender — Vite SPA build completed successfully.');
+  process.exit(0);
+}
 
 const projectIds = [...readFileSync(path.join(ROOT, 'src/data/customProjects.ts'), 'utf8').matchAll(/^\s+id:\s*'([^']+)'/gm)].map((m) => m[1]);
 const routes = ['/', '/projects', '/cv', '/privacy-policy', '/legal-notice', '/generateur-lettre', ...projectIds.map((id) => `/project/${id}`)];
@@ -50,78 +56,84 @@ const writeHtml = (file, html) => {
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const server = await preview({ root: ROOT, preview: { port: PORT, strictPort: true }, logLevel: 'error' });
-const launch = () => puppeteer.launch({ executablePath: chrome, headless: true, args: ['--no-sandbox'] });
-let browser = await launch();
-const results = [];
 try {
-  for (const lang of ['en', 'fr']) for (const route of routes) {
-    // Un Chrome neuf toutes les 8 pages : au-delà, les pages WebGL finissent par le faire tomber
-    if (results.length && results.length % 8 === 0) {
-      await browser.close();
-      browser = await launch();
-    }
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1440, height: 900 });
-    await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
-    await page.evaluateOnNewDocument((lng) => {
-      try {
-        localStorage.setItem('i18nextLng', lng);
-        sessionStorage.setItem('cd-intro-seen', '1');
-      } catch {}
-    }, lang);
-    await page.goto(`http://localhost:${PORT}${route}${lang === 'fr' ? '?lang=fr' : ''}`, { waitUntil: 'networkidle0', timeout: 30000 }).catch(() => {});
-    await page.waitForFunction(() => document.querySelector('link[rel="canonical"][data-rh]') || document.querySelector('meta[name="robots"][content*="noindex"]'), { timeout: 15000 });
-    await new Promise((r) => setTimeout(r, 800));
+  const server = await preview({ root: ROOT, preview: { port: PORT, strictPort: true }, logLevel: 'error' });
+  const launch = () => puppeteer.launch({ executablePath: chrome, headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] });
+  let browser = await launch();
+  const results = [];
+  try {
+    for (const lang of ['en', 'fr']) for (const route of routes) {
+      // Un Chrome neuf toutes les 8 pages : au-delà, les pages WebGL finissent par le faire tomber
+      if (results.length && results.length % 8 === 0) {
+        await browser.close();
+        browser = await launch();
+      }
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1440, height: 900 });
+      await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
+      await page.evaluateOnNewDocument((lng) => {
+        try {
+          localStorage.setItem('i18nextLng', lng);
+          sessionStorage.setItem('cd-intro-seen', '1');
+        } catch {}
+      }, lang);
+      await page.goto(`http://localhost:${PORT}${route}${lang === 'fr' ? '?lang=fr' : ''}`, { waitUntil: 'networkidle0', timeout: 30000 }).catch(() => {});
+      await page.waitForFunction(() => document.querySelector('link[rel="canonical"][data-rh]') || document.querySelector('meta[name="robots"][content*="noindex"]'), { timeout: 15000 });
+      await new Promise((r) => setTimeout(r, 800));
 
-    const data = await page.evaluate(() => {
-      const head = [...document.head.querySelectorAll('[data-rh]')].map((el) => el.outerHTML);
-      const title = document.title;
-      // Texte de la page, dans l'ordre : titres, paragraphes, éléments de liste (version lisible des textes animés)
-      const main = document.querySelector('#main-content') ?? document.body;
-      const blocks = [];
-      const seen = new Set();
-      main.querySelectorAll('h1, h2, h3, h4, p, li, dt, dd').forEach((el) => {
-        if (el.closest('[aria-hidden="true"], nav, footer, .sr-only')) return;
-        if (el.parentElement?.closest('p, li, dd')) return;
-        const sr = el.querySelector(':scope > .sr-only, :scope > * > .sr-only');
-        const text = (sr?.textContent ?? el.textContent ?? '').replace(/\s+/g, ' ').trim();
-        if (!text || text.length < 2 || seen.has(text)) return;
-        seen.add(text);
-        blocks.push([/^H[1-4]$/.test(el.tagName) ? el.tagName.toLowerCase() : 'p', text]);
+      const data = await page.evaluate(() => {
+        const head = [...document.head.querySelectorAll('[data-rh]')].map((el) => el.outerHTML);
+        const title = document.title;
+        // Texte de la page, dans l'ordre : titres, paragraphes, éléments de liste (version lisible des textes animés)
+        const main = document.querySelector('#main-content') ?? document.body;
+        const blocks = [];
+        const seen = new Set();
+        main.querySelectorAll('h1, h2, h3, h4, p, li, dt, dd').forEach((el) => {
+          if (el.closest('[aria-hidden="true"], nav, footer, .sr-only')) return;
+          if (el.parentElement?.closest('p, li, dd')) return;
+          const sr = el.querySelector(':scope > .sr-only, :scope > * > .sr-only');
+          const text = (sr?.textContent ?? el.textContent ?? '').replace(/\s+/g, ' ').trim();
+          if (!text || text.length < 2 || seen.has(text)) return;
+          seen.add(text);
+          blocks.push([/^H[1-4]$/.test(el.tagName) ? el.tagName.toLowerCase() : 'p', text]);
+        });
+        const links = [...new Map(
+          [...document.querySelectorAll('a[href^="/"]')]
+            .map((a) => [a.getAttribute('href').split('#')[0] || '/', (a.textContent ?? '').replace(/\s+/g, ' ').trim()])
+            .filter(([href, text]) => text && !href.startsWith('/assets') && !href.startsWith('/api'))
+        ).entries()];
+        return { head, title, blocks, links };
       });
-      const links = [...new Map(
-        [...document.querySelectorAll('a[href^="/"]')]
-          .map((a) => [a.getAttribute('href').split('#')[0] || '/', (a.textContent ?? '').replace(/\s+/g, ' ').trim()])
-          .filter(([href, text]) => text && !href.startsWith('/assets') && !href.startsWith('/api'))
-      ).entries()];
-      return { head, title, blocks, links };
-    });
-    await page.close();
+      await page.close();
 
-    const body = [
-      '<div class="prerender">',
-      ...data.blocks.map(([tag, text]) => `<${tag}>${esc(text)}</${tag}>`),
-      `<nav>${data.links.map(([href, text]) => `<a href="${esc(href)}">${esc(text)}</a>`).join(' ')}</nav>`,
-      '</div>',
-    ].join('\n');
-    const html = shell
-      .replace('<html lang="en">', `<html lang="${lang}">`)
-      .replace('</head>', `    <title>${esc(data.title)}</title>\n    ${data.head.join('\n    ')}\n  </head>`)
-      // Sous l'écran de démarrage (position fixe) : invisible pour le visiteur, lisible par les robots ; React le remplace
-      .replace(/(<div id="root">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>)/, `$1\n      ${body}`);
+      const body = [
+        '<div class="prerender">',
+        ...data.blocks.map(([tag, text]) => `<${tag}>${esc(text)}</${tag}>`),
+        `<nav>${data.links.map(([href, text]) => `<a href="${esc(href)}">${esc(text)}</a>`).join(' ')}</nav>`,
+        '</div>',
+      ].join('\n');
+      const html = shell
+        .replace('<html lang="en">', `<html lang="${lang}">`)
+        .replace('</head>', `    <title>${esc(data.title)}</title>\n    ${data.head.join('\n    ')}\n  </head>`)
+        // Sous l'écran de démarrage (position fixe) : invisible pour le visiteur, lisible par les robots ; React le remplace
+        .replace(/(<div id="root">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>)/, `$1\n      ${body}`);
 
-    const file = (lang === 'fr' ? 'fr/' : '') + (route === '/' ? 'index.html' : `${route.slice(1)}.html`);
-    writeHtml(file, html);
-    results.push(`${lang} ${route} → ${file} (${data.blocks.length} blocs, ${data.head.length} balises)`);
+      const file = (lang === 'fr' ? 'fr/' : '') + (route === '/' ? 'index.html' : `${route.slice(1)}.html`);
+      writeHtml(file, html);
+      results.push(`${lang} ${route} → ${file} (${data.blocks.length} blocs, ${data.head.length} balises)`);
+    }
+    // Page d'erreur : coquille neutre, non indexable (servie avec le statut 404 par .htaccess)
+    writeHtml(
+      '404.html',
+      shell.replace('</head>', '    <title>404 | Vansh Singh</title>\n    <meta name="robots" content="noindex" />\n  </head>')
+    );
+  } finally {
+    if (browser) await browser.close().catch(() => {});
+    if (server?.httpServer) await new Promise((r) => server.httpServer.close(r)).catch(() => {});
   }
-  // Page d'erreur : coquille neutre, non indexable (servie avec le statut 404 par .htaccess)
-  writeHtml(
-    '404.html',
-    shell.replace('</head>', '    <title>404 | Christen Dijoux</title>\n    <meta name="robots" content="noindex" />\n  </head>')
-  );
-} finally {
-  await browser.close();
-  await new Promise((r) => server.httpServer.close(r));
+  console.log(results.map((r) => `✓ ${r}`).join('\n'));
+} catch (err) {
+  console.warn('⚠️ [prerender] Pre-render could not finish in this environment:', err.message);
+  console.warn('Continuing with Vite SPA build artifacts.');
+  process.exit(0);
 }
-console.log(results.map((r) => `✓ ${r}`).join('\n'));
